@@ -1,0 +1,288 @@
+.
+├── directory.txt
+├── enterprise
+│   ├── modules
+│   │   ├── aws
+│   │   │   ├── account
+│   │   │   └── orgunit
+│   │   └── azure
+│   │       ├── managementgroup
+│   │       └── subscription
+│   ├── README.md
+│   └── root
+│       ├── main.tf
+│       ├── outputs.tf
+│       ├── providers.tf
+│       ├── settings.json
+│       ├── terraform.tf
+│       └── variables.tf
+├── identity
+│   ├── main.tf
+│   ├── modules
+│   │   ├── application
+│   │   │   ├── module.tf
+│   │   │   ├── outputs.tf
+│   │   │   └── variables.tf
+│   │   ├── aws
+│   │   │   ├── role-assignment
+│   │   │   └── role-definition
+│   │   ├── azure
+│   │   │   ├── role-assignment
+│   │   │   └── role-definition
+│   │   ├── group
+│   │   │   ├── module.tf
+│   │   │   ├── outputs.tf
+│   │   │   └── variables.tf
+│   │   ├── organzation
+│   │   │   ├── module.tf
+│   │   │   ├── outputs.tf
+│   │   │   └── variables.tf
+│   │   ├── team
+│   │   │   ├── module.tf
+│   │   │   ├── outputs.tf
+│   │   │   └── variables.tf
+│   │   ├── team_member
+│   │   │   ├── module.tf
+│   │   │   ├── outputs.tf
+│   │   │   └── variables.tf
+│   │   └── user
+│   │       ├── module.tf
+│   │       ├── outputs.tf
+│   │       └── variables.tf
+│   ├── outputs.tf
+│   ├── providers.tf
+│   ├── README.md
+│   ├── settings.json
+│   ├── terraform.tf
+│   └── variables.tf
+├── modules
+│   ├── aws
+│   │   ├── api
+│   │   │   └── README.md
+│   │   ├── automation
+│   │   │   ├── README.md
+│   │   │   ├── runbook
+│   │   │   └── schedule
+│   │   ├── cluster
+│   │   │   ├── addon
+│   │   │   ├── cluster
+│   │   │   ├── README.md
+│   │   │   └── workernode
+│   │   ├── compute
+│   │   │   ├── README.md
+│   │   │   └── vm
+│   │   ├── config
+│   │   │   ├── modules.tf
+│   │   │   ├── output.tf
+│   │   │   ├── README.md
+│   │   │   └── variables.tf
+│   │   ├── containers
+│   │   │   ├── container-application
+│   │   │   ├── container-registry
+│   │   │   ├── container-task
+│   │   │   ├── README.md
+│   │   │   └── sidecar
+│   │   ├── databases
+│   │   │   └── README.md
+│   │   ├── iam
+│   │   │   ├── README.md
+│   │   │   ├── role
+│   │   │   ├── role-assignment
+│   │   │   ├── role-definition
+│   │   │   └── user
+│   │   ├── jumpbox
+│   │   │   ├── modules.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── networking
+│   │   │   ├── connection
+│   │   │   ├── nat
+│   │   │   ├── network
+│   │   │   ├── nva
+│   │   │   ├── publicip
+│   │   │   ├── README.md
+│   │   │   ├── subnet
+│   │   │   └── vpn
+│   │   ├── secrets
+│   │   │   ├── modules.tf
+│   │   │   ├── output.tf
+│   │   │   ├── README.md
+│   │   │   └── variables.tf
+│   │   ├── serverless
+│   │   │   ├── api
+│   │   │   ├── function
+│   │   │   └── README.md
+│   │   ├── storage
+│   │   │   ├── modules.tf
+│   │   │   ├── output.tf
+│   │   │   ├── README.md
+│   │   │   └── variables.tf
+│   │   └── telemetry
+│   │       ├── modules.tf
+│   │       ├── output.tf
+│   │       ├── README.md
+│   │       └── variables.tf
+│   └── azure
+│       ├── api
+│       │   └── README.md
+│       ├── automation
+│       │   ├── README.md
+│       │   ├── runbook
+│       │   └── schedule
+│       ├── cluster
+│       │   ├── addon
+│       │   ├── cluster
+│       │   ├── README.md
+│       │   └── workernode
+│       ├── compute
+│       │   ├── README.md
+│       │   └── vm
+│       ├── config
+│       │   ├── modules.tf
+│       │   ├── output.tf
+│       │   ├── README.md
+│       │   └── variables.tf
+│       ├── containers
+│       │   ├── container-application
+│       │   ├── container-registry
+│       │   ├── container-task
+│       │   ├── README.md
+│       │   └── sidecar
+│       ├── databases
+│       │   └── README.md
+│       ├── iam
+│       │   ├── README.md
+│       │   ├── role
+│       │   ├── role-assignment
+│       │   ├── role-definition
+│       │   └── user
+│       ├── jumpbox
+│       │   ├── modules.tf
+│       │   ├── output.tf
+│       │   └── variables.tf
+│       ├── networking
+│       │   ├── connection
+│       │   ├── nat
+│       │   ├── network
+│       │   ├── nva
+│       │   ├── publicip
+│       │   ├── README.md
+│       │   ├── subnet
+│       │   └── vpn
+│       ├── secrets
+│       │   ├── modules.tf
+│       │   ├── output.tf
+│       │   ├── README.md
+│       │   └── variables.tf
+│       ├── serverless
+│       │   ├── api
+│       │   ├── function
+│       │   └── README.md
+│       ├── storage
+│       │   ├── modules.tf
+│       │   ├── output.tf
+│       │   ├── README.md
+│       │   └── variables.tf
+│       └── telemetry
+│           ├── modules.tf
+│           ├── output.tf
+│           ├── README.md
+│           └── variables.tf
+├── operations
+│   ├── environments
+│   │   ├── prod
+│   │   │   ├── main.tf
+│   │   │   ├── outputs.tf
+│   │   │   ├── providers.tf
+│   │   │   ├── terraform.tf
+│   │   │   └── variables.tf
+│   │   └── sandbox
+│   │       ├── main.tf
+│   │       ├── outputs.tf
+│   │       ├── providers.tf
+│   │       ├── terraform.tf
+│   │       └── variables.tf
+│   ├── modules
+│   │   ├── aws
+│   │   │   ├── actions
+│   │   │   ├── alerts
+│   │   │   ├── certifcates
+│   │   │   ├── logs
+│   │   │   ├── networks
+│   │   │   └── runbooks
+│   │   └── azure
+│   │       ├── actions
+│   │       ├── alerts
+│   │       ├── certifcates
+│   │       ├── logs
+│   │       ├── networks
+│   │       └── runbooks
+│   └── README.md
+├── platforms
+│   ├── consumer-modules
+│   │   ├── artifactory
+│   │   ├── consul
+│   │   ├── git
+│   │   ├── ipam
+│   │   ├── tfe
+│   │   └── vault
+│   └── management
+│       ├── artifactory
+│       │   ├── environments
+│       │   └── modules
+│       ├── consul
+│       │   ├── environments
+│       │   └── modules
+│       ├── git
+│       │   ├── environments
+│       │   └── modules
+│       ├── ipam
+│       │   ├── environments
+│       │   └── modules
+│       ├── tfe
+│       │   ├── environments
+│       │   └── modules
+│       └── vault
+│           ├── environments
+│           └── modules
+├── policy
+│   ├── environments
+│   │   └── dev
+│   │       ├── main.tf
+│   │       ├── outputs.tf
+│   │       ├── providers.tf
+│   │       ├── terraform.tf
+│   │       └── variables.tf
+│   ├── modules
+│   │   ├── policy-assignments
+│   │   │   ├── modules.tf
+│   │   │   ├── outputs.tf
+│   │   │   ├── providers.tf
+│   │   │   └── variables.tf
+│   │   ├── policy-def
+│   │   │   ├── modules.tf
+│   │   │   ├── outputs.tf
+│   │   │   ├── providers.tf
+│   │   │   └── variables.tf
+│   │   └── policy-set
+│   │       ├── modules.tf
+│   │       ├── outputs.tf
+│   │       ├── providers.tf
+│   │       └── variables.tf
+│   └── README.md
+├── README.md
+└── workloads
+    ├── README.md
+    ├── workload-management (PR based workload request)
+    │   ├── main.tf
+    │   ├── modules
+    │   │   └── workload
+    │   ├── outputs.tf
+    │   └── variables.tf
+    └── workload-template (N-Number of workloads)
+        ├── environments
+        │   └── dev
+        └── modules
+            └── environment
+
+162 directories, 123 files
